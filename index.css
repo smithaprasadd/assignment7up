@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global background + font */
+body {
+  @apply bg-[#0e1217] text-gray-100 font-sans;
+}
+
+.dark body {
+  @apply bg-white text-black;
+}
+/* App layout */
+.app {
+  @apply flex min-h-screen w-full;
+}
+
+/* Sidebar */
+.sidebar {
+  @apply w-64 bg-[#151922] h-screen p-6 flex flex-col gap-6 border-r border-gray-700/40;
+}
+
+.sidebar h2 {
+  @apply text-white font-extrabold text-2xl tracking-widest;
+}
+
+.sidebar a {
+  @apply text-gray-300 hover:text-white text-lg transition;
+}
+
+/* Content area */
+.content {
+  @apply flex-1 p-10 overflow-y-auto;
+}
+
+/* Header */
+.header h2 {
+  @apply text-3xl font-extrabold mb-4;
+}
+
+/* Genre buttons */
+.genre-btn {
+  @apply px-5 py-2 rounded-full bg-pink-600 text-gray-100 
+         hover:bg-green-500 hover:text-black transition font-medium;
+}
+
+.genre-btn-active {
+  @apply bg-green-600 text-white shadow-lg;
+}
+
+/* Song card */
+.song-card {
+  @apply bg-[#1c212c] p-5 rounded-xl shadow-md flex justify-between items-center mb-4 hover:bg-[#242b36] transition cursor-pointer;
+}
+
+.song-card h4 {
+  @apply text-xl font-semibold;
+}
+
+.song-card p {
+  @apply text-gray-400;
+}
+
+/* Player bar */
+.player {
+  @apply fixed bottom-4 left-72 right-6 bg-[#151922] p-4 rounded-xl shadow-2xl flex justify-between items-center;
+}
+
+.player button {
+  @apply px-4 py-2 bg-green-500 text-black font-semibold rounded-lg shadow hover:bg-green-400 transition;
+}
